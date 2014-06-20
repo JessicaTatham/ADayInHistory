@@ -1,6 +1,6 @@
 require 'rake'
 require 'rspec/core/rake_task'
-
+require 'wikipedia'
 
 require ::File.expand_path('../config/environment', __FILE__)
 

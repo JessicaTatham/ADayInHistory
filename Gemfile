@@ -17,7 +17,7 @@ gem 'activerecord', '~>4.1'
 gem 'rake'
 
 gem 'rerun'
-
+gem 'wikipedia-client'
 gem 'times_wire', '~> 0.9.0'
 
 group :test do

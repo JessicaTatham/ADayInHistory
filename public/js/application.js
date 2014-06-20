@@ -1,23 +1,25 @@
 $(document).ready(function() {
 
-  // $('form.get_birthday').on('submit', findArticles)
+  $('form.get_birthday').on('submit', doSomething)
 
 
-  // function findArticles(e) {
-  //   e.preventDefault();
-
-  //   var api_call = "http://api.nytimes.com/svc/search/v2/articlesearch.jsonp?begin_date="+$('form input').eq(0).val()+"&end_date="+$('form input').eq(0).val()+"&api-key=ccad39acf821ddb0c60d49a4fc361436:17:69505150"
+  function doSomething(e) {
+    e.preventDefault();
     
-  //   var request = $.ajax({
-  //     url: api_call,
-  //     dataType: 'jsonp',
-  //   })
+    var request = $.ajax({
+      url: '/animal',
+      type: 'post',
+      data: $('form').serialize()
+    })
 
-  //   request.done(function(response) {
-  //     console.log(response)
-  //   })
-  // }
+    request.done(function(response){
+    $('.animal_info').html(response)
+    // $('body').css('background-image', 'url('response.image')')
+
+    })
 
 
+
+};
 
 });
